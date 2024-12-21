@@ -15,6 +15,7 @@ export function useSearch(){
     if(search == '')
       return
 
+    setSearch('')
     updateSearching(true)
     e.currentTarget.querySelector('input')!.value = ''
     const result = await getMovie(search)
